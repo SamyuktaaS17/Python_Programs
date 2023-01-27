@@ -1,0 +1,232 @@
+'''
+#1. Exponentiation
+N=int(input("Enter base number"))
+K=int(input("Enter power"))
+prod=1
+i=0
+while i<N:
+    prod=prod*N
+    i+=1
+print(prod)
+'''
+'''
+#2. Sum of all digits
+a=int(input("Enter number"))
+sum=0
+
+while a != 0:
+    d=a%10
+    sum=sum+d
+    a=a//10
+print (sum)
+'''
+'''
+#3.Two digit numbers that are divisible by either 3 or 4
+i=10
+while i<100:
+    if (i%3==0) or (i%4==0):
+        print(i,end="")
+    else:
+        print(" ")
+    i+=1
+'''
+'''
+#4.Quotient and divisor
+dividend=int(input("Enter the dividend: "))
+divisor=int(input("Enter the divisor: "))
+q = 0
+while dividend>=divisor:
+    dividend=dividend-divisor
+    q = q + 1
+print("Quotient = ",q)
+print("Remainder = ",dividend)
+'''
+'''
+#5.Palindrome
+a=int(input("Enter number: "))
+sum=0
+num = a
+
+while a != 0:
+    d=a%10
+    sum=sum*10 + d
+    a=a//10
+if sum == num:
+    print("Palindrome Number")
+else:
+    print("Not a Palindrome Number")
+'''
+'''
+#6. Armstrong number
+a=int(input("Enter number: "))
+sum=0
+num = a
+
+while a != 0:
+    d=a%10
+    sum=sum + (d*d*d)
+    a=a//10
+if sum == num:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+'''
+'''
+#7. GCD of two numbers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a < b:
+    n = a
+else:
+    n = b
+i = 1
+while (i <= n):
+    if a%i==0 and b%i==0:
+        GCD = i
+    i +=1
+print("GCD = ", GCD)
+'''
+'''
+#8. Voltage
+while True:
+    n = int(input("Enter Voltage: "))
+    if n < 5:
+        continue
+    elif n > 5:
+        print("Program will terminate")
+        break
+    else:
+        print("CUTOFF Volatage reached")
+        break
+'''
+'''
+n = int(input("Enter a number = "))
+x = n  
+count = 0
+ 
+while True:
+    count += 1
+ 
+        
+    root = 0.5 * (x + (n / x))
+ 
+        
+    if (abs(root - x) < 0.0001) :
+        break
+    x = root
+print("Root = ",root)
+'''
+'''
+#10. Multiplication Table
+N=int(input("Enter a number: "))
+for x in range(1,11):
+    print(x,"*",N,"=",x*N)
+'''
+'''
+#11. Prime numbers
+
+for x in range(1,101):
+    cond=1
+    for y in range (2,x):
+        if x%y==0:
+            cond=0
+            break
+    if cond==1:
+        print(x,end=",")
+'''
+'''
+n = int(input("Enter number:"))
+f = 1
+for i in range(1,n+1):
+    f *= i
+print("Factorial of", n, "is", f)
+'''
+'''
+n = 1
+X = int(input("Enter Range: "))
+for i in range(1,X):
+    n *= 3
+    print(n,",",end=" " )
+'''
+'''
+n = -4
+x = int(input("Enter range: "))
+for i in range(x):
+    print(n, end=" ")
+    n += i*(i+1)
+'''
+'''
+x = int(input("Enter a number: "))
+for i in range(1,x):
+    n = i**3
+    print(n, end=" ")
+'''
+'''
+x = int(input("Enter x:"))
+n = int(input("Enter n:"))
+s = 1
+for i in range(2,n+1):
+    s += x**i/i
+    print(s,end = " ")
+'''
+'''
+x = int(input("Enter x:"))
+n = int(input("Enter n:"))
+s = 0
+for i in range(1,n+1):
+    s += ((-1)**i)*(x**i)
+    print(s,end=" ")
+'''
+'''
+n = int(input("Enter n:"))
+a = 0
+b = 1
+print(a,b,end = " ")
+for i in range(1,n+1):
+    s = a + b 
+    a = b
+    b = s
+    print(s,end=" ")
+'''
+'''
+for i in range(8):
+    if i%3 != 0:
+        print(i,end=" ")
+'''
+'''
+for i in range(5):
+    for j in range(i,0,-1):
+        print(j,end=" ")
+    print()
+'''
+'''
+n = 5
+for i in range(5):
+    for j in range(n-i+1):
+        print(end=" ")
+    for j in range(i+1):
+        print("*", end=" ")
+    print()
+'''
+'''
+def fac(n):
+    f = 1 
+    for i in range(1,n+1): 
+        f *= i 
+    return f
+
+n = 7
+for i in range(n):
+    for j in range(n-i+1):
+        print(end=" ")
+    for j in range(i+1):
+        print(fac(i) // (fac(j) * fac(i-j)), end=" ")
+    print()
+'''
+
+
+
+
+
+
+
