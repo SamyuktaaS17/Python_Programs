@@ -1,0 +1,41 @@
+'''
+import random
+
+r=int(input("Enter number of rounds: "))
+total=r
+total_machine=0
+for i in range(r):
+    sum1= int(input("Enter predicted sum= " ))
+    sum2=random.randint(1,12)
+    r1=random.randint(1,6)
+    r2=random.randint(1,6)
+    sum3=r1+r2
+    if sum1==sum3:
+        total=total+sum1
+    elif sum1!=sum3:
+        total=total-1
+    elif sum2==sum3:
+        total_machine=total_machine+sum2
+    else:
+        total_machine=total_machine-1
+    if total_machine>total:
+        print("Machine won ")
+    elif total>total_machine:
+        print("Human is winner ")
+    else:
+        print("Tie")
+
+'''
+
+str=input("Enter string ")
+MORSE_CODE_DICT = { 'A':'.-', 'B':'-...','C':'-.-.', 'D':'-..', 'E':'.','F':'..-.', 'G':'--.', 'H':'....','I':'..', 'J':'.---', 'K':'-.-','L':'.-..', 'M':'--', 'N':'-.','O':'---', 'P':'.--.', 'Q':'--.-',
+'R':'.-.', 'S':'...', 'T':'-','U':'..-', 'V':'...-', 'W':'.--','X':'-..-', 'Y':'-.--', 'Z':'--..','1':'.----', '2':'..---', '3':'...--','4':'....-', '5':'.....', '6':'-....','7':'--...', '8':'---..', '9':'----.',
+'0':'-----', ', ':'--..--', '.':'.-.-.-','?':'..--..', '/':'-..-.', '-':'-....-','(':'-.--.', ')':'-.--.-'}
+str=str.upper()
+yes=' '
+for i in str:
+    if i!=' ':
+        yes+=MORSE_CODE_DICT[i]
+print(yes)
+
+
